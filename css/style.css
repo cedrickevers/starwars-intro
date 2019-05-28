@@ -8,6 +8,33 @@ body {
 /*===COULEUR DE FOND===*/
 
 
+.intro {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    z-index: 1;
+    animation: intro 6s ease-out 1s;
+    color: rgb(75, 213, 238);
+    font-weight: 400;
+    font-size: 300%;
+    opacity: 0;
+}
+
+@keyframes intro {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 .fade{
 position: relative;
 width: 100%;
@@ -25,7 +52,7 @@ background-size: cover;
   justify-content:center;
   position:relative;
   height:800px;
-  color: blueviolet;
+  color: silver;
   font-size:400%;
  letter-spacing: 14px;
  line-height:50%;
@@ -52,6 +79,7 @@ apparaîtra plus petit. La force de cet effet est déterminée par la valeur de 
 
   transform-origin: 50% 50%;
   animation: crawl 60s linear;
+  animation-delay: 2s;
 }
 @keyframes crawl {
     0% {
