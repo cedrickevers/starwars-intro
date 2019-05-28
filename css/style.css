@@ -1,0 +1,64 @@
+body {
+  width: 100%;
+  height: 100%;
+  background: white;
+  overflow: hidden;
+}
+
+/*===COULEUR DE FOND===*/
+
+
+.fade{
+position: relative;
+width: 100%;
+/*Postionner le texte en bas de page*/
+min-height: 60vh;
+/*Combler l'espaceblanc créer par le vh par la couleur de fond*/
+top:-100%;
+/*Dégradé transparant du haut vers le bas*/
+background: url('../images/bg-star.gif')no-repeat center fixed;
+background-size: cover;
+
+}
+.star-wars{
+  display:flex;
+  justify-content:center;
+  position:relative;
+  height:800px;
+  color: blueviolet;
+  font-size:400%;
+ letter-spacing: 14px;
+ line-height:50%;
+
+/*
+La propriété perspective détermine la distance entre le plan d'équation z = 0 et la position de l'utilisateur 
+afin de donner une perspective aux objets positionnés dans l'espace 3D. 
+Chaque élément pour lequel la côte (z) est positif sera plus grand et chaque élément pour lequel z est négatif 
+apparaîtra plus petit. La force de cet effet est déterminée par la valeur de cette propriété*/
+ perspective: 400px;
+ text-align:justify;
+  }
+
+
+.crawl {
+  position: relative;
+/*
+  Faire soritre le texte de l'écran par le haut*/
+  top: 99999px;
+
+
+/*La propriété transform-origin permet de modifier l'origine du repère pour les
+ opérations de transformation d'un élément.*/
+
+  transform-origin: 50% 50%;
+  animation: crawl 60s linear;
+}
+@keyframes crawl {
+    0% {
+    top: -100px;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+    100% { 
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }*/
